@@ -30,14 +30,10 @@ yarn-error.log*
 
 # Docker
 docker-compose.override.yml
-Dockerfile
-Dockerfile.*
 .env
 *.env
 
-# Kubernetes
-*.yaml
-*.yml
+# Kubernetesddd
 kubectl-config
 
 # OS files
