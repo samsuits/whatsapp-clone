@@ -1,0 +1,79 @@
+# Laravel
+/vendor
+/.idea
+/.vscode
+/node_modules
+/.phpunit.result.cache
+/.env
+/.env.*
+/storage/*.key
+/public/hot
+/public/storage
+/storage/*.log
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/views
+/storage/app/public
+/bootstrap/cache/*.php
+
+# React / Node
+/node_modules
+/build
+/dist
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+/npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+docker-compose.override.yml
+Dockerfile
+Dockerfile.*
+.env
+*.env
+
+# Kubernetes
+*.yaml
+*.yml
+kubectl-config
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PHPStorm
+*.iml
+.idea/
+
+# Others
+*.log
+*.cache
+
+# Composer
+composer.lock
+vendor/
+
+# Laravel Mix
+/public/mix-manifest.json
+/public/js/app.js
+/public/js/app.js.map
+/public/css/app.css
+/public/css/app.css.map
+
+# Node packages
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Laravel storage
+/storage/
+
+# React build
+/build
+/dist
+
+# ignore by default but track exceptions
+!/.gitignore
