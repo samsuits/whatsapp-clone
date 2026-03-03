@@ -1,5 +1,6 @@
 FROM php:8.4-fpm
 
+# System deps
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -7,22 +8,22 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
-    zip \
-    nodejs \
-    npm
+    zip
 
+# PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
+# Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
 
 COPY ../api .
 
-RUN composer install
-RUN npm install
-RUN npm run build
+# Install backend deps
+RUN composer install --no-dev --optimize-autoloader
 
+# Permissions
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 EXPOSE 9000
