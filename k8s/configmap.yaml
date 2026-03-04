@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: whatsapp-dev
+data:
+  DB_HOST: mysql
+  DB_DATABASE: whatsapp
+  DB_USERNAME: root
+  REDIS_HOST: redis
